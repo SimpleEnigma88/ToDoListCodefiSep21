@@ -9,7 +9,8 @@ body {
     color: #000000;
 }
 
-p {
+p,
+h5 {
     padding: 0px;
 }
 
@@ -18,7 +19,7 @@ p {
 }
 
 #headerwrap {
-    width: 1000px;
+    width: 865px;
     float: left;
     margin: 0 auto;
 }
@@ -41,7 +42,7 @@ p {
 }
 
 #contentwrap {
-    width: 850px;
+    width: 600px;
     float: left;
     margin: 0 auto;
 }
@@ -69,8 +70,15 @@ p {
 }
 
 #content div p {
-    font-size: 11px;
+    font-size: 6px;
     margin-left: 5px;
+    position: relative;
+}
+
+#content div h5 {
+    font-size: 8px;
+    margin-left: 5px;
+    position: relative;
 }
 
 .stickyNote {
@@ -78,18 +86,58 @@ p {
     width: 80px;
     height: 80px;
     gap: 30px;
-    background-image: url(stickyNote.jpg);
+    background-image: url(./enlarge-note.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-size: contain;
     transition: all .3s ease-in-out;
+    position: relative;
+    transform: rotate(3deg);
 }
 
 .stickyNote:hover {
+    background-image: url(./enlarge-note.jpg);
     transform: translateY(50%);
-    transform: scale(3);
+    transform: scale(2.75);
     transition: all .3s ease-in-out;
+    z-index: 3;
 }
+
+.close-btn {
+    font-size: 7px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    padding: 0.2em 0.45em;
+    border: none;
+    color: #000;
+    opacity: 0.6;
+    z-index: 4;
+    cursor: pointer;
+    transition: 300ms ease all;
+}
+
+.done-btn {
+    font-size: 7px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    padding: 0.2em 0.45em;
+    border: none;
+    color: #000;
+    opacity: 0.6;
+    z-index: 4;
+    cursor: pointer;
+    transition: 300ms ease all;
+}
+
+/* .close-btn:hover,
+.close-btn:focus {
+    opacity: 1;
+    transform: scale(1.1);
+} */
 
 #leftcolumnwrap {
     width: 150px;
@@ -155,4 +203,10 @@ p {
 .button-30:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
+}
+
+#taskName,
+#taskOwner,
+#taskDesc {
+    width: 140px;
 }

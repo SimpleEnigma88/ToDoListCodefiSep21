@@ -20,32 +20,108 @@
             <div id="leftcolumnwrap">
                 <div id="leftcolumn">
                     <p>Board Actions:</p>
-                    <button class="button-30" role="button" id="organizeByDate">Organize-Due Date</button>
-                    <button class="button-30" role="button" id="clearCompleteTasks">Clear Completed</button>
-                    <button class="button-30" role="button">placeholder?</button><br><br>
-                    <button class="button-30" role="button" id="addNote">Add Note</button>
+                    <button class="button-30" role="button" id="organizeByDate">Organize-Oldest</button>
+                    <button class="button-30" role="button" id="clearCompleteTasks">Clear Completed Jobs</button>
+                    <button class="button-30" role="button">placeholder?</button><br>
+                    <form onsubmit="this.reset()" id="noteForm">
+                        <div class="form-control">
+                            <input type="hidden" name="subTime" id="subTime">
+                        </div>
+                        <div class="form-control">
+                            <label for="taskName">Task Name</label>
+                            <input id="taskName" class="taskName" name="taskName" type="text" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="taskOwner">Task Owner</label>
+                            <input id="taskOwner" class="taskOwner" name="taskOwner" type="text">
+                        </div>
+                        <div class="form-control">
+                            <label for="taskDesc">Description:</label>
+                            <textarea name="taskDesc" id="taskDesc" rows="6" class="taskDesc"></textarea>
+                        </div>
+                        <div class="form-control" hidden>
+                            <label for="dueDate">Due Date:</label>
+                            <input type="date" id="dueDate" name="dueDate" min="1980-01-01" max="2100-12-31" />
+                        </div>
+                        <div class="form-control"></div>
+                        <button class="button-30" type="submit" id="addNote">Add Note</button>
+                        <button class="button-30" type="reset" id="reset">Reset</button>
+                    </form>
                 </div>
             </div>
             <div id="contentwrap">
                 <div id="content">
+
+
+
                     <div class="stickyNote">
-                        <p>Groceries: Apples, Caramel Dip, Kettle Corn, Salsa</p>
+                        <h5>Task Name</h5>
+                        <p>Yada yada yada, yaaaa, da yada yada...</p>
+                        <span class="close-btn"><strong>X</strong></span>
+                        <span class="done-btn"><strong>&#x2713;</strong></span>
                     </div>
                     <div class="stickyNote">
-                        <p>Zoey, practice, 7p Wed. </p>
+                        <h5>Task Name</h5>
+                        <p>Yada yada yada, yaaaa, da yada yada...</p>
+                        <span class="close-btn"><strong>X</strong></span>
+                        <span class="done-btn"><strong>&#x2713;</strong></span>
                     </div>
                     <div class="stickyNote">
-                        <p>Check oil - bronco</p>
+                        <h5>Task Name</h5>
+                        <p>Yada yada yada, yaaaa, da yada yada...</p>
+                        <span class="close-btn"><strong>X</strong></span>
+                        <span class="done-btn"><strong>&#x2713;</strong></span>
                     </div>
                     <div class="stickyNote">
-                        <p>Smile More!</p>
+                        <h5>Task Name</h5>
+                        <p>Yada yada yada, yaaaa, da yada yada...</p>
+                        <span class="close-btn"><strong>X</strong></span>
+                        <span class="done-btn"><strong>&#x2713;</strong></span>
                     </div>
                     <div class="stickyNote">
-                        <p>Follow Through!</p>
+                        <h5>Task Name</h5>
+                        <p>Yada yada yada, yaaaa, da yada yada...</p>
+                        <span class="close-btn"><strong>X</strong></span>
+                        <span class="done-btn"><strong>&#x2713;</strong></span>
                     </div>
                     <div class="stickyNote">
-                        <p>J - party at cape park, 2pm, need gift(likes rockets)</p>
+                        <h5>Task Name</h5>
+                        <p>Yada yada yada, yaaaa, da yada yada...</p>
+                        <span class="close-btn"><strong>X</strong></span>
+                        <span class="done-btn"><strong>&#x2713;</strong></span>
                     </div>
+                    <div class="stickyNote">
+                        <h5>Task Name</h5>
+                        <p>Yada yada yada, yaaaa, da yada yada...</p>
+                        <span class="close-btn"><strong>X</strong></span>
+                        <span class="done-btn"><strong>&#x2713;</strong></span>
+                    </div>
+                    <div class="stickyNote">
+                        <h5>Task Name</h5>
+                        <p>Yada yada yada, yaaaa, da yada yada...</p>
+                        <span class="close-btn"><strong>X</strong></span>
+                        <span class="done-btn"><strong>&#x2713;</strong></span>
+                    </div>
+                    <div class="stickyNote">
+                        <h5>Task Name</h5>
+                        <p>Yada yada yada, yaaaa, da yada yada...</p>
+                        <span class="close-btn"><strong>X</strong></span>
+                        <span class="done-btn"><strong>&#x2713;</strong></span>
+                    </div>
+                    <div class="stickyNote">
+                        <h5>Task Name</h5>
+                        <p>Yada yada yada, yaaaa, da yada yada...</p>
+                        <span class="close-btn"><strong>X</strong></span>
+                        <span class="done-btn"><strong>&#x2713;</strong></span>
+                    </div>
+                    <div class="stickyNote">
+                        <h5>Task Name</h5>
+                        <p>Yada yada yada, yaaaa, da yada yada...</p>
+                        <span class="close-btn"><strong>X</strong></span>
+                        <span class="done-btn"><strong>&#x2713;</strong></span>
+                    </div>
+
+
 
                 </div>
             </div>

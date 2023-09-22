@@ -55,6 +55,26 @@ p {
     background-repeat: no-repeat;
     border-radius: 10px;
     margin: 1px 0 0 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 10px;
+}
+
+#content div {}
+
+.stickyNote {
+    border: 0px solid black;
+    width: 80px;
+    height: 80px;
+    gap: 30px;
+    background-image: url(/img/stickyNote.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #leftcolumnwrap {
@@ -64,6 +84,7 @@ p {
 }
 
 #leftcolumn {
+    flex-direction: column;
     background: #33CCFF;
     border-radius: 10px;
     border: 1px solid #1fb8eb;

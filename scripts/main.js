@@ -1,3 +1,1 @@
-function addNote(text, date, dueDate = "ASAP") {
-    //
-}
+// create note, add to array, change to JSON store to local.   

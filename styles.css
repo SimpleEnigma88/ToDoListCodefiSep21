@@ -87,7 +87,7 @@ p {
 
 .stickyNote:hover {
     transform: scale(1.7);
-    transition: transform .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 #leftcolumnwrap {

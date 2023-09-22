@@ -86,7 +86,8 @@ p {
 }
 
 .stickyNote:hover {
-    transform: scale(1.7);
+    transform: translateY(50%);
+    transform: scale(3);
     transition: all .3s ease-in-out;
 }
 

@@ -1,6 +1,6 @@
 * {
     margin: 0px;
-    padding: 0;
+    padding: 0px;
 }
 
 body {
@@ -92,14 +92,11 @@ h5 {
     background-size: contain;
     transition: all .3s ease-in-out;
     position: relative;
-    transform: rotate(3deg);
+    transition: transform 0.3s ease-in-out;
 }
 
 .stickyNote:hover {
-    background-image: url(./enlarge-note.jpg);
-    transform: translateY(50%);
     transform: scale(2.75);
-    transition: all .3s ease-in-out;
     z-index: 3;
 }
 
@@ -133,11 +130,6 @@ h5 {
     transition: 300ms ease all;
 }
 
-/* .close-btn:hover,
-.close-btn:focus {
-    opacity: 1;
-    transform: scale(1.1);
-} */
 
 #leftcolumnwrap {
     width: 150px;

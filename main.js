@@ -48,10 +48,10 @@ function callbackFormData(event) {
 
 function insertHTMLforNote(task) {
     document.getElementById('content').innerHTML = document.getElementById('content').innerHTML +
-        `<div class="stickyNote" style="transform: rotate(${(Math.floor(Math.random() * 7) - 3)}deg);">
+        `<div class="stickyNote" id ="${task.taskID} "style="transform: rotate(${(Math.floor(Math.random() * 7) - 3)}deg);">
         <h5>${task.taskName}</h5>
         <p>${task.description}</p>
-        <span class="close-btn"><strong>X</strong></span>
+        <span class="close-btn" id="close-btn"><strong>X</strong></span>
         <span class="done-btn"><strong>&#x2713;</strong></span>
     </div>`;
 }
@@ -62,13 +62,26 @@ clearButton.addEventListener("click", () => {
         clearBoard();
     }
 });
-
+const deleteButton = document.getElementById('close-btn');
+deleteButton.addEventListener("click", () => {
+    deleteTask(deleteButton.parentElement.id);
+});
 function clearBoard() {
     document.getElementById('content').innerHTML = '';
     taskList = [];
     localStorage.removeItem("taskList");
 }
 
+function deleteTask(id) {
+    document.getElementById(id).outerHTML = "";
+    let list = getListFromLocalStorage();
+    list.forEach((item, index) => {
+        if (item.taskID === id) {
+            arr.splice(index, 1);
+        }
+    });
+    localStorage.setItem('taskList', JSON.stringify(list));
+}
 
 function addTaskToTaskList(obj) {
     console.log(taskList);
